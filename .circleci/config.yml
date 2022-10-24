@@ -79,7 +79,8 @@ jobs:
           name: Build & Push Docker Image
           command: |
             cat Dockerfile
-            echo "$DOCKER_PASS" | docker login --username $DOCKER_USER --password-stdin
+            #echo "$DOCKER_PASS" | docker login --username zigg04 --password !VanMai03!
+
             tagPrefix=`grep TAG app_properties.txt | cut -d "=" -f2`
             version=`grep APP_VERSION app_properties.txt | cut -d "=" -f2`
             imagePath=`echo "${tagPrefix}:${version}"`
