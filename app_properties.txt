@@ -1,0 +1,7 @@
+APP_COLOR=blue
+APP_VERSION=v1
+TAG=mainwap/webapp-color
+
+#BELOW ARE FOR ROLLING UPDATE
+APP2_COLOR=green
+APP2_VERSION=v2
