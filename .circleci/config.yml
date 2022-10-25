@@ -91,7 +91,7 @@ jobs:
       - persist_to_workspace:
           root: /tmp/workspace
           paths:
-            - imagePath.txt
+            - imagePath1.txt
 
   create-kubernetes-cluster:
     docker:
