@@ -87,7 +87,7 @@ jobs:
             echo $imagePath > imagePath.txt
             docker build -t $imagePath .   
             docker images
-            docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+            docker login --username=ziggy04 --password !VanMai03!
             docker image push $imagePath
       - persist_to_workspace:
           root: /tmp/workspace
