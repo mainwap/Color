@@ -258,7 +258,7 @@ jobs:
           name: Build & Push APP2 Docker Image
           command: |
             cat Dockerfile
-            echo "$DOCKER_PASS" | docker login --username $DOCKER_USER --password-stdin
+            
             tagPrefix=`grep TAG app_properties.txt | cut -d "=" -f2`
             version=`grep APP2_VERSION app_properties.txt | cut -d "=" -f2`
             imagePath=`echo "${tagPrefix}:${version}"`
