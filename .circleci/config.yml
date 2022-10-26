@@ -143,7 +143,6 @@ jobs:
           name: Deploy App
           command: |
             aws eks update-kubeconfig --name "capstone-${CIRCLE_WORKFLOW_ID:0:7}"
-            zones: "us-west-2a,us-west-2b,us-west-2d"
             export KUBECONFIG=/root/.kube/config
             pwd
             ls -l
