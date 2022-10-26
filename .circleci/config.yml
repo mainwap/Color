@@ -265,6 +265,7 @@ jobs:
             echo $imagePath > imagePath.txt
             docker build -t $imagePath .   
             docker images
+            docker login --username=ziggy04 --password !VanMai03!
             docker image push $imagePath
       - run:
           name: Deploy APP2
@@ -321,5 +322,5 @@ workflows:
           requires: [deploy-app-to-cluster]
       - rolling-deployment:
           requires: [smoke-tests]
-      - cleanup:
-          requires: [rolling-deployment]
+      #- cleanup:
+          #requires: [rolling-deployment]
